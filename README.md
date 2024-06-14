@@ -2,14 +2,18 @@
 
 스프링 부트 공부하고 정리하는 스터디입니다. 😙
 
-## 개발 환경
+## 🛠️ 개발 환경
 
+ ### Backend
 * IDE : IntelliJ IDEA Community
-* OS : Window
-* SpringBoot 3.3.0
 * Java17
+* SpringBoot 3.3.0
+* Spring Data Jpa
 * Gradle
+* Junit
 
+### FrontEnd
+* 진행 예정
 
 ## Git Flow
 
@@ -19,22 +23,14 @@ git flow 사용을 위해 `우아한 형제들`의 [git flow 사용](https://tec
 또한 `commit message` 는 `[feature/역할/기능] git 컨벤션` 와 같이 통일하여 작성했습니다.
 
 ```update : 기존의 기능 수정
-- add : 새로운 기능 추가
-- update : 기존의 기능 수정
-- delete: 기존의 파일 삭제
-- fix : 버그를 고친 경우
-- rename : 이름 변경이 있을 때
-- chore : 빌드 태스트 업데이트, 패키지 매니저를 설정하는 경우
-- test : 테스트 코드 추가, 테스트 리팩토링
-- build : 시스템 또는 외부 종속성에 영향을 미치는 변경사항 (npm, gulp, yarn 레벨)
-- ci : CI관련 설정 style : 코드 의미에 영향을 주지 않는 변경사항 (포맷, 세미콜론 누락, 공백 등)
-- refactor : 성능 개선
+- feat : 새로운 기능 추가
+- fix : 버그 수정
+- docs : 문서 수정
+- style : 코드 포맷팅, 세미콜론 누락, 코드 변경이 없는 경우
+- refactor : 코드 리팩토링
+- test : 테스트 코드, 리팩토링 테스트 코드 추가
+- chore : 빌드 업무 수정, 패키지 매니저 수정
 ```
-
-
-## 프로젝트 구조
-
-
 
 
 
