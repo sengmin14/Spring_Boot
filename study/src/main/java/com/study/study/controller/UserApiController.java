@@ -9,6 +9,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Controller;
@@ -25,8 +27,9 @@ public class UserApiController {
             @ApiResponse(responseCode = "201", description = "회원가입 성공")
     })
     @PostMapping("/user")
-    public String signup(@RequestBody AddUserRequest request) {
+    public ResponseEntity<String> signup(@RequestBody AddUserRequest request) {
         userService.save(request);
-        return "회원가입 성공";
+        return ResponseEntity.status(HttpStatus.CREATED).body("회원가입 성공");
     }
+
 }
