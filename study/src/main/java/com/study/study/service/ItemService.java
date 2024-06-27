@@ -1,5 +1,6 @@
 package com.study.study.service;
 
+import com.study.study.domain.Article;
 import com.study.study.domain.Item;
 import com.study.study.dto.AddItemRequest;
 import com.study.study.dto.ItemResponse;
@@ -21,7 +22,13 @@ public class ItemService {
     }
 
     public List<Item> findAll() {
+//        System.out.println(itemRepository.findAll());
         return itemRepository.findAll();
+    }
+
+    public Item findById(long id) {
+        return itemRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Not found : " + id));
     }
 
 }

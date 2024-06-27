@@ -13,10 +13,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -39,7 +36,7 @@ public class ItemApiController {
 
     @Operation(summary = "아이템 목록 조회 요청", description = "아이템 목록 조회 했을 때 동작을 수행하는 API입니다.")
     @ApiResponses({
-            @ApiResponse(responseCode = "200", description = "글 목록 조회 성공")
+            @ApiResponse(responseCode = "200", description = "아이템 목록 조회 성공")
     })
     @GetMapping("/api/items")
     public ResponseEntity<List<ItemResponse>> findAllItems() {
@@ -47,8 +44,19 @@ public class ItemApiController {
                 .stream()
                 .map(ItemResponse::new)
                 .toList();
-
         return ResponseEntity.ok()
                 .body(items);
+    }
+
+    @Operation(summary = "아이템 조회 요청", description = "아이템 조회 했을 때 동작을 수행하는 API입니다.")
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "아이템 조회 성공")
+    })
+    @GetMapping("/api/items/{id}")
+    @CrossOrigin
+    public ResponseEntity<ItemResponse> findItem(@PathVariable long id) {
+        Item item = itemService.findById(id);
+        return ResponseEntity.ok()
+                .body(new ItemResponse(item));
     }
 }
