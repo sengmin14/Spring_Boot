@@ -31,4 +31,10 @@ public class Item {
         this.quantity = quantity;
     }
 
+    public void update(String itemName, int price, int quantity) {
+        this.itemName = itemName;
+        this.price = price;
+        this.quantity = quantity;
+    }
+
 }

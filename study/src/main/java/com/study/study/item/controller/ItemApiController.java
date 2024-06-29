@@ -1,8 +1,11 @@
 package com.study.study.item.controller;
 
+import com.study.study.blog.domain.Article;
+import com.study.study.blog.dto.UpdateArticleRequest;
 import com.study.study.item.domain.Item;
 import com.study.study.item.dto.AddItemRequest;
 import com.study.study.item.dto.ItemResponse;
+import com.study.study.item.dto.UpdateItemRequest;
 import com.study.study.item.service.ItemService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -13,6 +16,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RequiredArgsConstructor
 @RestController
@@ -67,5 +71,17 @@ public class ItemApiController {
 
         return ResponseEntity.ok()
                 .build();
+    }
+
+    @Operation(summary = "아이템 수정 요청", description = "아이템 수정 했을 때 동작을 수행하는 API입니다.")
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "아이템 수정 성공")
+    })
+    @PutMapping("/api/items/{id}")
+    public ResponseEntity<Item> updateArticle(@PathVariable long id, @RequestBody UpdateItemRequest request) {
+        Item updateItem = itemService.update(id, request);
+
+        return ResponseEntity.ok()
+                .body(updateItem);
     }
 }
