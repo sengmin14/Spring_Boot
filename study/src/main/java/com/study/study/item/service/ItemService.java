@@ -28,4 +28,8 @@ public class ItemService {
                 .orElseThrow(() -> new IllegalArgumentException("Not found : " + id));
     }
 
+    public void delete(long id){
+        itemRepository.deleteById(id);
+    }
+
 }

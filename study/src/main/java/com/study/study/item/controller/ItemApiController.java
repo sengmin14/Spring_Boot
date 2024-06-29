@@ -56,4 +56,16 @@ public class ItemApiController {
         return ResponseEntity.ok()
                 .body(new ItemResponse(item));
     }
+
+    @Operation(summary = "아이템 삭제 요청", description = "아이템 삭제 했을 때 동작을 수행하는 API입니다.")
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "아이템 삭제 성공")
+    })
+    @DeleteMapping("/api/items/{id}")
+    public ResponseEntity<Void> deleteArticle(@PathVariable long id) {
+        itemService.delete(id);
+
+        return ResponseEntity.ok()
+                .build();
+    }
 }
