@@ -1,7 +1,6 @@
-package com.study.study.dto;
+package com.study.study.item.dto;
 
-import com.study.study.domain.Item;
-import jakarta.persistence.Column;
+import com.study.study.item.domain.Item;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

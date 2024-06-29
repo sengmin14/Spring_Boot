@@ -1,9 +1,9 @@
-package com.study.study.service;
+package com.study.study.blog.service;
 
-import com.study.study.domain.Article;
-import com.study.study.dto.AddArticleRequest;
-import com.study.study.dto.UpdateArticleRequest;
-import com.study.study.repository.BlogRepository;
+import com.study.study.blog.domain.Article;
+import com.study.study.blog.dto.AddArticleRequest;
+import com.study.study.blog.dto.UpdateArticleRequest;
+import com.study.study.blog.repository.BlogRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,6 @@
-package com.study.study.repository;
+package com.study.study.item.repository;
 
-import com.study.study.domain.Item;
+import com.study.study.item.domain.Item;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ItemRepository extends JpaRepository<Item, Long> {

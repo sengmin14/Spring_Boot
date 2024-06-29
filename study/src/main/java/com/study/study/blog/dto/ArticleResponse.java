@@ -1,6 +1,6 @@
-package com.study.study.dto;
+package com.study.study.blog.dto;
 
-import com.study.study.domain.Article;
+import com.study.study.blog.domain.Article;
 import lombok.Getter;
 
 @Getter

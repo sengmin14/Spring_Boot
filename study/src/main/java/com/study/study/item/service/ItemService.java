@@ -1,12 +1,9 @@
-package com.study.study.service;
+package com.study.study.item.service;
 
-import com.study.study.domain.Article;
-import com.study.study.domain.Item;
-import com.study.study.dto.AddItemRequest;
-import com.study.study.dto.ItemResponse;
-import com.study.study.repository.ItemRepository;
+import com.study.study.item.domain.Item;
+import com.study.study.item.dto.AddItemRequest;
+import com.study.study.item.repository.ItemRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

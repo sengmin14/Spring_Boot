@@ -1,12 +1,9 @@
-package com.study.study.controller;
+package com.study.study.item.controller;
 
-import com.study.study.domain.Article;
-import com.study.study.domain.Item;
-import com.study.study.dto.AddArticleRequest;
-import com.study.study.dto.AddItemRequest;
-import com.study.study.dto.ArticleResponse;
-import com.study.study.dto.ItemResponse;
-import com.study.study.service.ItemService;
+import com.study.study.item.domain.Item;
+import com.study.study.item.dto.AddItemRequest;
+import com.study.study.item.dto.ItemResponse;
+import com.study.study.item.service.ItemService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;

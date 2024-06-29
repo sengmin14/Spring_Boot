@@ -1,6 +1,6 @@
-package com.study.study.dto;
+package com.study.study.item.dto;
 
-import com.study.study.domain.Item;
+import com.study.study.item.domain.Item;
 import lombok.Getter;
 
 @Getter
